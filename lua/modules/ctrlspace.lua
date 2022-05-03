@@ -1,0 +1,34 @@
+local g = vim.g
+g.CtrlSpaceFileEngine = "file_engine_linux_amd64"
+g.ctrlspace_use_tablineend = 1
+g.CtrlSpaceLoadLastWorkspaceOnStart = 1
+g.CtrlSpaceSaveWorkspaceOnSwitch = 1
+g.CtrlSpaceSaveWorkspaceOnExit = 1
+g.CtrlSpaceUseTabline = 0
+g.CtrlSpaceUseArrowsInTerm = 1
+g.CtrlSpaceUseMouseAndArrowsInTerm = 1
+g.CtrlSpaceGlobCommand = "rg --files --follow --hidden -g '!{.git/*,node_modules/*,target/*,vendor/*}'"
+g.CtrlSpaceIgnoredFiles = "\v(tmp|temp)[\\/]"
+g.CtrlSpaceDefaultMappingKey = "<C-space> "
+--  g.CtrlSpaceSymbols = { File = "◯", CTab = "▣", Tabs = "▢" }
+g.CtrlSpaceSymbols = {
+  CS = " ",
+  Sin = "",
+  All = "",
+  Vis = "★",
+  File = "",
+  Tabs = "ﱡ",
+  CTab = "ﱢ",
+  NTM = "⁺",
+  WLoad = "ﰬ",
+  WSave = "ﰵ",
+  Zoom = "",
+  SLeft = "",
+  SRight = "",
+  BM = "",
+  Help = "",
+  IV = "",
+  IA = "",
+  IM = " ",
+  Dots = "ﳁ",
+}

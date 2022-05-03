@@ -139,6 +139,9 @@ for _, v in pairs(data_path) do
     os.execute("mkdir -p " .. v)
   end
 end
+-- ctrl space
+opt.encoding = "utf-8"
+
 opt.directory = join_paths(cache_path .. "/swag")
 opt.undodir = join_paths(cache_path .. "/undo")
 opt.backupdir = join_paths(cache_path .. "/backup")
@@ -167,7 +170,7 @@ opt.visualbell = false -- Use visual bell instead of beeping.
 opt.lazyredraw = true -- Redraw only when needed.
 opt.redrawtime = 1500
 opt.signcolumn = "number" -- "yes:1"
-opt.showtabline = 1 -- always show tabs 2 always, 1 more then 1 tab, 0 never
+opt.showtabline = 0 -- always show tabs 2 always, 1 more then 1 tab, 0 never
 opt.winwidth = 30
 opt.winminwidth = 10
 opt.pumheight = 15 -- pop up menu height

@@ -1,0 +1,132 @@
+## common
+
+ToggleHelp | Toggle the Help view
+Down | Move the selection bar down
+Up | Move the selection bar up
+Previous | Move the selection bar to the previously opened item
+PreviousCR | Move the selection bar to the previously opened item and open it
+Next | Move the selection bar to the next opened item
+Top | Move the selection bar to the top of the list
+Bottom | Move the selection bar to the bottom of the list
+ScrollDown | Move the selection bar one screen down
+ScrollUp | Move the selection bar one screen up
+HalfScrollDown | Move the selection bar a half screen down
+HalfScrollUp |Move the selection bar a half screen up
+Close | Close the list
+Quit | Quit Vim with a prompt if unsaved changes found
+EnterSearchMode | Enter Search Mode
+RestorePreviousSearch Bring back the previous searched text
+RestoreNextSearch | Bring the next searched text
+BackOrClearSearch | Return to the previous list (if any) or clear the searched text
+ToggleFileMode | Toggle File List ([O]pen List) view
+ToggleFileModeAndSearch Enter the File List ([O]pen List) in Search Mode
+ToggleBufferMode | Toggle Buffer List view ([H]ome List)
+ToggleBufferModeAndSearch Enter the Buffer List ([H]ome List) in Search Mode
+ToggleWorkspaceMode Toggle Workspace List view
+ToggleWorkspaceModeAndSearch Enter the Workspace List in Search Mode
+ToggleTabMode | Toggle Tab List view (Tab [L]ist)
+ToggleTabModeAndSearch Enter the Tab List (Tab [L]ist) in Search Mode
+ToggleBookmarkMode | Toggle Bookmark List view
+ToggleBookmarkModeAndSearch | Enter the Bookmark List in Search Mode
+
+## search
+
+ClearOrRemoveLetter Remove a previously entered character
+AddLetter | Add a character to search
+SwitchOff | Exit Search Mode
+SwitchOffCR | Exit Search Mode and accept first result
+SwitchOffSpace | Exit Search Mode and accept first result but stay in the plugin window
+ClearLetters | Clear search phrase
+
+## buffer
+
+SearchParentDirectory | Cyclic search through parent directories
+SearchParentDirectoryInFile | Cyclic search through parent directories in File Mode
+LoadBuffer | Open selected buffer
+LoadManyBuffers |Open selected buffer and stay in the plugin window
+GoToWindow | Jump to the window containing selected buffer
+GoToWindowAndBack | Change the target window to one containing selected buffer
+VisibleMode |Toggle Visible Mode
+ZoomMode | Toggle Zoom Mode
+LoadBufferVS | Open selected buffer in a new vertical split
+LoadManyBuffersVS | Open selected buffer in a new vertical split but stay in the plugin window
+LoadBufferSP | Open selected buffer in a new horizontal split
+LoadManyBuffersSP | Open selected buffer in a new horizontal split but stay in the plugin window
+CloseWindow | Close the split window containing selected buffer
+CloseManyWindows | Leave the window containing selected buffer - close all others
+LoadBufferT | Open selected buffer in a new tab
+LoadManyBuffersT | Open selected buffer in a new (or next) tab but stay in the plugin window
+LoadManyBuffersCT | Open selected buffer always in a new tab but stay in the plugin window
+NewTabLabel | Change the tab name
+RemoveTabLabel | Remove a custom tab name
+MoveTab | Move the current tab
+SwitchTab | Go to the previous/next tab
+CopyBufferToTab | Copy the selected buffer to to the previous/next tab
+MoveBufferToTab | Move the selected buffer to to the previous/next tab
+DeleteBuffer | Delete the selected buffer (close it)
+DeleteHiddenNonameBuffers | Close all empty noname buffers
+ToggleAllMode | Enter the All Mode
+ToggleAllModeAndSearch | Enter the Search Mode combined with the All mode
+DetachBuffer | Forget the current buffer (make it foreign to the current tab)
+DeleteForeignBuffers | Delete (close) all foreign buffers (detached from tabs)
+CloseBuffer | Try to close selected buffer (delete if possible, forget otherwise)
+CloseTab | Close the current tab, then perform F, and then D
+NewWorkspace | Close all buffers - make a new workspace
+
+## file
+
+EditFile | Edit a new file or a sibling of selected buffer
+ExploreDirectory | Explore a directory of selected buffer
+GoToDirectory | Change CWD to a directory having the selected buffer (i) or go back (I)
+RemoveFile | Remove the selected buffer (file) entirely (from the disk too)
+RenameFileOrBuffer | Move or rename the selected buffer (together with its file)
+CopyFileOrBuffer | Copy selected file
+GoToBufferOrFile | Jump to a previous/next (G/g) tab containing the selected buffer
+SearchParentDirectory Cyclic search through parent directories
+LoadFile | Open selected file
+LoadManyFiles |Open selected file but stays in the plugin window
+LoadFileVS | Open selected file in a new vertical split
+LoadManyFilesVS | Open selected file in a new vertical split but stay in the plugin window
+LoadFileSP | Open selected file in a new horizontal split
+LoadManyFilesSP | Open selected file in a new horizontal split but stay in the plugin window
+LoadFileT | Open selected file in a new tab
+LoadManyFilesT |Open selected file in a new (or next) tab but stay in the plugin window
+LoadManyFilesCT | Open selected file always in a new tab but stay in the plugin window
+Refresh | Refresh the file list (force reloading)
+ZoomMode | Toggle Zoom Mode
+
+## bookmark
+
+GoToBookmark | Jump to selected bookmark (Tab - close, Space - stay)
+Rename | Change selected bookmark name
+Edit | Edit selected bookmark directory
+Add | Add a new bookmark (A - with CWD)
+Delete | Delete selected bookmark
+
+## tab
+
+GoToTab | Open a selected tab (Tab - close, Space - stay)
+CloseTab | Close the selected tab, then foreign buffers and nonames
+AddTab | Create a new tab
+CopyTab | Make a copy of the current tab
+SwitchTab | Go to the previous/next tab
+MoveTab | Move the selected tab backward/forward
+NewTabLabel | Change the selected tab name
+RemoveTabLabel |Remove the selected tab name
+CollectUnsavedBuffers | Create a new tab with unsaved buffers
+CollectForeignBuffers | Create a new tab with foreign buffers
+NewWorkspace | Close all tabs - make a new workspace
+
+## workspace
+
+LoadOrSave | Load (or save) selected workspace (Tab - close, Space - stay)
+Append | Append a selected workspace to the current one
+NewWorkspace |Make a new workspace - close all buffers and tabs
+ToggleSubmode | Toggle the mode from Load to Save or vice-versa
+Delete | Delete selected workspace
+Rename | Rename selected workspace
+
+## nop
+
+ToggleAllMode | Enter the All Mode if in Buffer Mode already
+ToggleAllModeAndSearch | Enter the Search Mode combined with the All mode if in Buffer Mode already
