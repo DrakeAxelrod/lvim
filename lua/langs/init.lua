@@ -38,6 +38,23 @@ lvim.lsp.automatic_servers_installation = true
 --   return server ~= "emmet_ls"
 -- end, lvim.lsp.automatic_configuration.skipped_servers)
 
+local function encoding(client)
+  if type(client) ~= 'table' then
+    if client == nil then
+      client = 1
+    end
+    client = vim.lsp.get_client_by_id(client)
+  end
+  local oe = client.offset_encoding
+  if oe == nil then
+    return 'utf-8'
+  end
+  if type(oe) == 'table' then
+    oe = oe[1] or 'utf-8'
+  end
+  return oe
+end
+
 -- you can set a custom on_attach function that will be used for all the language servers
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 lvim.lsp.on_attach_callback = function(client, bufnr)
@@ -45,6 +62,9 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
 
+  if client.name == "clangd" then
+    client.offset_encoding = "utf-16"
+  end
   require("copilot").setup({})
   --Enable completion triggered by <c-x><c-o>
   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")

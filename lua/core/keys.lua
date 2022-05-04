@@ -165,7 +165,7 @@ M.leadermaps = {
   { "<leader>?", description = "Cheatsheet" },
   { "<leader>w", ":w!<CR>", description = "Save", opts = opts },
   { "<leader>q", ":q!<CR>", description = "Quit", opts = opts },
-  { "<leader>j", ":HopWord<CR>", "Jump!", opts = opts },
+  { "<leader>j", ":HopWord<CR>", description = "Jump!", opts = opts },
   {
     "<leader>/",
     [[:lua require("Comment.api").toggle_current_linewise()<CR>]],
@@ -191,7 +191,7 @@ M.leadermaps = {
   { "<leader>sr", telecmd("r", "oldfiles", {}), description = "Open Recent File", opts = opts },
   { "<leader>sR", telecmd("R", "registers", {}), description = "Registers", opts = opts },
   { "<leader>st", telecmd("t", "live_grep", {}), description = "Text", opts = opts },
-  { "<leader>sb", telecmd("b", "buffers", {}), "Buffers" },
+  { "<leader>sb", telecmd("b", "buffers", {}), description = "Buffers", opts = opts },
   { "<leader>sk", ":Legendary keymaps<CR>", description = "Keymaps", opts = opts },
   { "<leader>sC", ":Legendary commands<CR>", description = "Commands", opts = opts },
   { "<leader>sa", ":Legendary autocmds<CR>", description = "Autocmds", opts = opts },
@@ -227,7 +227,7 @@ M.leadermaps = {
   { "<leader>lw", ":Telescope diagnostics<CR>", description = "Diagnostics", opts = opts },
   { "<leader>lf", vim.lsp.buf.formatting, description = "Format", opts = opts },
   { "<leader>li", ":LspInfo<CR>", description = "Info", opts = opts },
-  { "<leader>lI", ":LspInstallInfo<CR>", "Installer Info", opts = opts },
+  { "<leader>lI", ":LspInstallInfo<CR>", description = "Installer Info", opts = opts },
   { "<leader>lj", vim.diagnostic.goto_next, description = "Next Diagnostic", opts = opts },
   { "<leader>lk", vim.diagnostic.goto_prev, description = "Prev Diagnostic", opts = opts },
   { "<leader>ll", vim.lsp.codelens.run, description = "CodeLens Action", opts = opts },
@@ -325,7 +325,7 @@ M.leadermaps = {
     description = "view neovim log",
     opts = opts,
   },
-  { "<leader>LlN", ":edit $NVIM_LOG_FILE<CR>", "Open the Neovim logfile", opts = opts },
+  { "<leader>LlN", ":edit $NVIM_LOG_FILE<CR>", description = "Open the Neovim logfile", opts = opts },
   {
     "<leader>Llp",
     function()

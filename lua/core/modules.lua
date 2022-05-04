@@ -2,7 +2,7 @@ local lvim = lvim
 -- Additional Plugins
 lvim.plugins = {
   -- { "yamatsum/nvim-nonicons" },
-  { "NTBBloodbath/doom-one.nvim", config = [[require("modules.doom-one")]] },
+  -- { "NTBBloodbath/doom-one.nvim", config = [[require("modules.doom-one")]] },
   -- { "RRethy/vim-illuminate" },
   { "echasnovski/mini.nvim", config = [[require("modules.mini")]] },
   { "nathom/filetype.nvim" },
@@ -31,13 +31,28 @@ lvim.plugins = {
   -- { "LinArcX/telescope-command-palette.nvim", after = { "sqlite.lua" } },
   { "nvim-telescope/telescope-github.nvim", after = { "plenary.nvim" } },
   { "nvim-telescope/telescope-smart-history.nvim", requires = { { "tami5/sqlite.lua", rocks = { "sqlite", "luv" } } } }, -- better history
-  -- { "MunifTanjim/nui.nvim", after = { "nvim-web-devicons" } },
-  -- { "stevearc/dressing.nvim", after = { "nui.nvim" } },
+  { "MunifTanjim/nui.nvim", after = { "nvim-web-devicons" } },
+  { "stevearc/dressing.nvim", after = { "nui.nvim" } },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "*" }, {
+        RGB = true, -- #RGB hex codes
+        RRGGBB = true, -- #RRGGBB hex codes
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+        rgb_fn = true, -- CSS rgb() and rgba() functions
+        hsl_fn = true, -- CSS hsl() and hsla() functions
+        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+      })
+    end,
+  },
 }
 
 require("modules.telescope.config")
 -- require("modules.ctrlspace")
 require("modules.resize")
+-- require("modules.alpha")
 lvim.builtin.cmp.formatting.source_names.copilot = "(Copilot)"
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", priority = 10 })
 table.insert(lvim.builtin.cmp.sources, { name = "nvim_lsp_signature_help" })

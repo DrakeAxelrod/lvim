@@ -5,9 +5,10 @@ local join_paths = join_paths
 
 g.do_filetype_lua = 1
 opt.cmdheight = 1
-lvim.log.level = "warn"
+lvim.log.level = "error"
 lvim.format_on_save = true
-lvim.colorscheme = "doom-one"
+lvim.colorscheme = "onedarker"
+-- lvim.transparent_window = true
 lvim.use_icons = true
 lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
