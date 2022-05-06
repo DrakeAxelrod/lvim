@@ -8,16 +8,16 @@ opt.cmdheight = 1
 lvim.log.level = "error"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
--- lvim.transparent_window = true
+lvim.transparent_window = true
 lvim.use_icons = true
 lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = false
-lvim.builtin.nvimtree.active = false
+lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.bufferline.active = false
+lvim.builtin.bufferline.active = true
 lvim.builtin.which_key.setup.window.border = "none"
 -- vim.pretty_print(lvim.builtin)
 
